@@ -4,7 +4,7 @@ resource "aws_instance" "ec2-demo" {
 }
 
 resource "aws_ec2_tag" "example" {
-  resource_id = aws_instance.ec2-demo
+  resource_id = aws_instance.ec2-demo.id
   key         = "Name"
   value       = "Hello World"
 }
